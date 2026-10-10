@@ -10,16 +10,18 @@
 
   <!-- Top of the page: name and short tagline -->
   <header>
+    <!-- Language switch button, handled by script.js -->
+    <button id="lang-toggle" type="button">EL</button>
     <h1>Foivos Farkonas</h1>
-    <p>Aspiring AI and data analysis freelancer</p>
+    <p data-i18n="tagline">Aspiring AI and data analysis freelancer</p>
   </header>
 
   <main>
 
     <!-- Short introduction about me -->
     <section id="about">
-      <h2>About me</h2>
-      <p>
+      <h2 data-i18n="aboutTitle">About me</h2>
+      <p data-i18n="aboutText">
         Hi, I'm Foivos. I studied aircraft engineering and I love mathematics.
         I'm now building my skills in AI and data analysis, and this portfolio
         shows what I create along the way.
@@ -28,15 +30,15 @@
 
     <!-- Placeholder: real projects will be added here later -->
     <section id="projects">
-      <h2>Projects</h2>
-      <p>Coming soon.</p>
+      <h2 data-i18n="projectsTitle">Projects</h2>
+      <p data-i18n="projectsText">Coming soon.</p>
     </section>
 
     <!-- Placeholder: contact details will be added later -->
     <section id="contact">
-      <h2>Contact</h2>
+      <h2 data-i18n="contactTitle">Contact</h2>
       <p>
-        Email:
+        <span data-i18n="emailLabel">Email:</span>
         <a href="mailto:foivosfarkonas@gmail.com">foivosfarkonas@gmail.com</a>
       </p>
     </section>
@@ -47,5 +49,6 @@
     <p>&copy; 2026 Foivos Farkonas</p>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
