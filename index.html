@@ -4,19 +4,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Foivos Farkonas | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Top of the page: name and short tagline -->
+  <!-- Top of the page: name, tagline and the airfoil drawing -->
   <header>
-    <!-- Language switch button, handled by script.js -->
-    <button id="lang-toggle" type="button">EL</button>
-    <h1>Foivos Farkonas</h1>
-    <p data-i18n="tagline">Aspiring AI and data analysis freelancer</p>
+    <div class="wrap">
+      <!-- Language switch button, handled by script.js -->
+      <button id="lang-toggle" type="button">EL</button>
+      <h1>Foivos Farkonas</h1>
+      <p class="tagline" data-i18n="tagline">Aspiring AI and data analysis freelancer</p>
+
+      <!-- Airfoil = the cross-section of a wing. A nod to my aircraft engineering studies. -->
+      <svg class="airfoil" viewBox="0 0 600 190" role="img" aria-label="Line drawing of a wing cross-section">
+        <!-- Chord line: the straight line from the front to the back of the wing -->
+        <line class="guide dashed" x1="20" y1="100" x2="580" y2="98" />
+        <!-- The wing outline (pathLength="1" lets the CSS animation draw it) -->
+        <path class="shape" pathLength="1"
+          d="M 20 100 C 20 60, 120 38, 240 40 C 380 42, 500 80, 580 98 C 500 108, 380 114, 240 112 C 120 110, 40 124, 20 100 Z" />
+        <!-- Red dot on the leading edge (the front of the wing) -->
+        <circle class="point" cx="20" cy="100" r="5" />
+        <!-- Dimension line under the wing: its length is the chord "c" -->
+        <line class="guide" x1="20" y1="150" x2="580" y2="150" />
+        <line class="guide" x1="20" y1="142" x2="20" y2="158" />
+        <line class="guide" x1="580" y1="142" x2="580" y2="158" />
+        <text x="292" y="176">c</text>
+      </svg>
+    </div>
   </header>
 
-  <main>
+  <main class="wrap">
 
     <!-- Short introduction about me -->
     <section id="about">
@@ -31,22 +52,24 @@
     <!-- Placeholder: real projects will be added here later -->
     <section id="projects">
       <h2 data-i18n="projectsTitle">Projects</h2>
-      <p data-i18n="projectsText">Coming soon.</p>
+      <div class="empty">
+        <p data-i18n="projectsText">My first project is in progress. Check back soon.</p>
+      </div>
     </section>
 
-    <!-- Placeholder: contact details will be added later -->
+    <!-- Contact: the email is the main action -->
     <section id="contact">
       <h2 data-i18n="contactTitle">Contact</h2>
-      <p>
-        <span data-i18n="emailLabel">Email:</span>
-        <a href="mailto:foivosfarkonas@gmail.com">foivosfarkonas@gmail.com</a>
-      </p>
+      <p data-i18n="contactText">Have a project or a question? Write to me.</p>
+      <a class="email-link" href="mailto:foivosfarkonas@gmail.com">foivosfarkonas@gmail.com</a>
     </section>
 
   </main>
 
   <footer>
-    <p>&copy; 2026 Foivos Farkonas</p>
+    <div class="wrap">
+      <p>&copy; 2026 Foivos Farkonas</p>
+    </div>
   </footer>
 
   <script src="script.js"></script>

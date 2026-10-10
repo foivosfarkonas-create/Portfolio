@@ -9,9 +9,9 @@ const translations = {
       "I'm now building my skills in AI and data analysis, and this portfolio " +
       "shows what I create along the way.",
     projectsTitle: "Projects",
-    projectsText: "Coming soon.",
+    projectsText: "My first project is in progress. Check back soon.",
     contactTitle: "Contact",
-    emailLabel: "Email:",
+    contactText: "Have a project or a question? Write to me.",
   },
   el: {
     tagline: "Επίδοξος freelancer στο AI και την ανάλυση δεδομένων",
@@ -21,9 +21,9 @@ const translations = {
       "μαθηματικά. Αυτή τη στιγμή χτίζω τις δεξιότητές μου στο AI και στην " +
       "ανάλυση δεδομένων, και αυτό το portfolio δείχνει τι δημιουργώ στην πορεία.",
     projectsTitle: "Projects",
-    projectsText: "Έρχονται σύντομα.",
+    projectsText: "Το πρώτο μου project είναι σε εξέλιξη. Ξαναπέρασε σύντομα.",
     contactTitle: "Επικοινωνία",
-    emailLabel: "Email:",
+    contactText: "Έχεις project ή κάποια ερώτηση; Γράψε μου.",
   },
 };
 

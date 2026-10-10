@@ -1,70 +1,160 @@
-/* Colors used across the site. Change them here and the whole page updates. */
+/* Colors and sizes used across the site. Change them here and the whole page updates. */
 :root {
-  --red: #c8102e;
-  --dark-red: #9a0c23;
+  --ink: #14181f;
+  --paper: #f2f4f6;
   --white: #ffffff;
-  --text: #222222;
-  --light-gray: #f4f4f4;
+  --line: #8a94a0;
+  --red: #c8102e;
+  --red-dark: #9a0c23;
+  --page-width: 960px;
 }
 
 /* Base style for the whole page */
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.6;
-  color: var(--text);
-  background-color: var(--white);
+  font-family: "Archivo", Arial, Helvetica, sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.65;
+  color: var(--ink);
+  background-color: var(--paper);
 }
 
-/* Red banner at the top */
+/* One shared column so every section lines up on the left edge */
+.wrap {
+  max-width: var(--page-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- Hero (top of the page) ---------- */
 header {
-  background-color: var(--red);
-  color: var(--white);
-  text-align: center;
-  padding: 60px 20px;
+  position: relative;
+  padding: 72px 0 48px;
 }
 
-header h1 {
-  margin: 0 0 10px 0;
-  font-size: 2.5rem;
-}
-
-header p {
-  margin: 0;
-  font-size: 1.2rem;
-}
-
-/* Language switch button, white outline on the red banner */
+/* Language switch button, top right */
 #lang-toggle {
-  float: right;
+  position: absolute;
+  top: 24px;
+  right: 24px;
   padding: 6px 14px;
-  font-size: 1rem;
-  color: var(--white);
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--ink);
   background-color: transparent;
-  border: 2px solid var(--white);
+  border: 1.5px solid var(--ink);
   border-radius: 4px;
   cursor: pointer;
 }
 
 #lang-toggle:hover {
-  background-color: var(--white);
+  background-color: var(--ink);
+  color: var(--white);
+}
+
+header h1 {
+  margin: 0 0 12px 0;
+  font-size: clamp(2.6rem, 8vw, 5.5rem);
+  font-weight: 800;
+  font-stretch: 125%;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.tagline {
+  margin: 0 0 48px 0;
+  max-width: 34ch;
+  font-size: 1.35rem;
   color: var(--red);
+  font-weight: 600;
 }
 
-/* Keep the content in a readable column in the center */
-main {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
+/* Airfoil drawing */
+.airfoil {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
+.airfoil .shape {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 2.5;
+  stroke-linejoin: round;
+}
+
+.airfoil .guide {
+  fill: none;
+  stroke: var(--line);
+  stroke-width: 1;
+}
+
+.airfoil .dashed {
+  stroke-dasharray: 6 5;
+}
+
+.airfoil .point {
+  fill: var(--red);
+}
+
+.airfoil text {
+  fill: var(--line);
+  font-family: "Archivo", Arial, sans-serif;
+  font-size: 15px;
+  font-style: italic;
+}
+
+/* The one animation on the page: the wing outline draws itself once */
+.airfoil .shape {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: draw 2.4s ease-out 0.3s forwards;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* ---------- Content sections ---------- */
 section {
-  padding: 30px 0;
-  border-bottom: 1px solid var(--light-gray);
+  padding: 48px 0;
+  border-top: 1px solid var(--line);
 }
 
 section h2 {
-  color: var(--red);
+  margin: 0 0 16px 0;
+  font-size: 1.75rem;
+  font-weight: 700;
+  font-stretch: 112%;
+}
+
+/* Keep paragraphs short enough to read comfortably */
+section p {
+  max-width: 62ch;
+  margin: 0 0 12px 0;
+}
+
+/* Projects empty state */
+#projects .empty {
+  max-width: 62ch;
+  padding: 24px;
+  background-color: var(--white);
+  border-left: 4px solid var(--red);
+}
+
+#projects .empty p {
+  margin: 0;
+}
+
+/* Contact: the email is the main action */
+.email-link {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 1.35rem;
+  font-weight: 600;
 }
 
 /* Links */
@@ -73,13 +163,32 @@ a {
 }
 
 a:hover {
-  color: var(--dark-red);
+  color: var(--red-dark);
 }
 
-/* Bottom of the page */
+/* Visible keyboard focus for links and the language button */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--red);
+  outline-offset: 3px;
+}
+
+/* ---------- Footer ---------- */
 footer {
-  background-color: var(--light-gray);
-  text-align: center;
-  padding: 20px;
+  padding: 24px 0 40px;
+  border-top: 1px solid var(--line);
   font-size: 0.9rem;
+  color: #5a6470;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* People who turn off animations in their system see the finished drawing */
+@media (prefers-reduced-motion: reduce) {
+  .airfoil .shape {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
 }
