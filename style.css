@@ -1,0 +1,68 @@
+/* Colors used across the site. Change them here and the whole page updates. */
+:root {
+  --red: #c8102e;
+  --dark-red: #9a0c23;
+  --white: #ffffff;
+  --text: #222222;
+  --light-gray: #f4f4f4;
+}
+
+/* Base style for the whole page */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--white);
+}
+
+/* Red banner at the top */
+header {
+  background-color: var(--red);
+  color: var(--white);
+  text-align: center;
+  padding: 60px 20px;
+}
+
+header h1 {
+  margin: 0 0 10px 0;
+  font-size: 2.5rem;
+}
+
+header p {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+/* Keep the content in a readable column in the center */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+section {
+  padding: 30px 0;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+section h2 {
+  color: var(--red);
+}
+
+/* Links */
+a {
+  color: var(--red);
+}
+
+a:hover {
+  color: var(--dark-red);
+}
+
+/* Bottom of the page */
+footer {
+  background-color: var(--light-gray);
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
