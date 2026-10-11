@@ -12,6 +12,12 @@ const translations = {
     projectsText: "My first project is in progress. Check back soon.",
     contactTitle: "Contact",
     contactText: "Have a project or a question? Write to me.",
+    flowLabel: "airflow",
+    labelAngle: "Angle of attack",
+    labelLift: "Lift coefficient (red arrow)",
+    statusOk: "Smooth airflow: more angle gives more lift.",
+    statusStall: "Stall: the airflow separates from the wing and lift drops.",
+    modelNote: "Simplified thin-airfoil model. Real wings differ near the stall.",
   },
   el: {
     tagline: "Επίδοξος freelancer στο AI και την ανάλυση δεδομένων",
@@ -24,6 +30,12 @@ const translations = {
     projectsText: "Το πρώτο μου project είναι σε εξέλιξη. Ξαναπέρασε σύντομα.",
     contactTitle: "Επικοινωνία",
     contactText: "Έχεις project ή κάποια ερώτηση; Γράψε μου.",
+    flowLabel: "ροή αέρα",
+    labelAngle: "Γωνία προσβολής",
+    labelLift: "Συντελεστής άνωσης (κόκκινο βέλος)",
+    statusOk: "Ομαλή ροή: μεγαλύτερη γωνία δίνει περισσότερη άνωση.",
+    statusStall: "Απώλεια στήριξης: η ροή αποκολλάται από την πτέρυγα και η άνωση πέφτει.",
+    modelNote: "Απλοποιημένο μοντέλο λεπτής αεροτομής. Κοντά στην απώλεια στήριξης οι πραγματικές πτέρυγες διαφέρουν.",
   },
 };
 

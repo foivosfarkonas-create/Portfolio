@@ -4,6 +4,8 @@
   --paper: #f2f4f6;
   --white: #ffffff;
   --line: #8a94a0;
+  --grid: #e6eaee;
+  --muted: #5a6470;
   --red: #c8102e;
   --red-dark: #9a0c23;
   --page-width: 960px;
@@ -70,11 +72,127 @@ header h1 {
   font-weight: 600;
 }
 
-/* Airfoil drawing */
+/* ---------- Interactive airfoil ("lab") ---------- */
+
+/* Drawing and controls side by side, on engineering grid paper */
+.lab {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 32px;
+  align-items: center;
+  padding: 24px;
+  background-color: var(--white);
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 24px 24px;
+  border: 1px solid var(--line);
+}
+
+/* Stack them on narrow screens (phones) */
+@media (max-width: 760px) {
+  .lab {
+    grid-template-columns: 1fr;
+    padding: 16px;
+  }
+}
+
 .airfoil {
   display: block;
   width: 100%;
   height: auto;
+}
+
+/* Arrow heads */
+.airfoil .head-flow {
+  fill: var(--line);
+}
+
+.airfoil .head-lift {
+  fill: var(--red);
+}
+
+.lift {
+  stroke: var(--red);
+  stroke-width: 3;
+}
+
+/* Controls panel */
+.panel {
+  background-color: var(--white);
+}
+
+.control {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-weight: 600;
+}
+
+.angle-value {
+  font-variant-numeric: tabular-nums;
+}
+
+#alpha-slider {
+  width: 100%;
+  margin: 8px 0 20px;
+  accent-color: var(--red);
+}
+
+/* The big live number */
+.lift-value {
+  margin: 0;
+  font-size: 3.5rem;
+  font-weight: 800;
+  font-stretch: 125%;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.lift-caption {
+  margin: 4px 0 16px;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.chart {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.chart .axis {
+  stroke: var(--ink);
+  stroke-width: 1;
+}
+
+.chart .curve {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 2;
+}
+
+.chart text {
+  fill: var(--muted);
+  font-family: "Archivo", Arial, sans-serif;
+  font-size: 13px;
+  font-style: italic;
+}
+
+.status {
+  margin: 12px 0 8px;
+  font-size: 0.95rem;
+}
+
+.status .stall {
+  color: var(--red);
+  font-weight: 600;
+}
+
+.note {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--muted);
 }
 
 .airfoil .shape {
