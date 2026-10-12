@@ -9,7 +9,14 @@ const translations = {
       "I'm now building my skills in AI and data analysis, and this portfolio " +
       "shows what I create along the way.",
     projectsTitle: "Projects",
-    projectsText: "My first project is in progress. Check back soon.",
+    p1Type: "Data analysis",
+    p1Text:
+      "How much does each Greek airport depend on summer tourism? " +
+      "An analysis of 27 years of Eurostat passenger data for 47 airports.",
+    p1Stat1: "passengers in 2025",
+    p1Stat2: "of Skiathos traffic in 4 summer months",
+    p1Stat3: "passengers in 2020 (COVID-19)",
+    p1Link: "View on GitHub",
     contactTitle: "Contact",
     contactText: "Have a project or a question? Write to me.",
     flowLabel: "airflow",
@@ -27,7 +34,14 @@ const translations = {
       "μαθηματικά. Αυτή τη στιγμή χτίζω τις δεξιότητές μου στο AI και στην " +
       "ανάλυση δεδομένων, και αυτό το portfolio δείχνει τι δημιουργώ στην πορεία.",
     projectsTitle: "Projects",
-    projectsText: "Το πρώτο μου project είναι σε εξέλιξη. Ξαναπέρασε σύντομα.",
+    p1Type: "Ανάλυση δεδομένων",
+    p1Text:
+      "Πόσο εξαρτάται κάθε ελληνικό αεροδρόμιο από τον καλοκαιρινό τουρισμό; " +
+      "Ανάλυση 27 ετών δεδομένων επιβατών της Eurostat για 47 αεροδρόμια.",
+    p1Stat1: "επιβάτες το 2025",
+    p1Stat2: "της κίνησης της Σκιάθου σε 4 καλοκαιρινούς μήνες",
+    p1Stat3: "επιβάτες το 2020 (COVID-19)",
+    p1Link: "Δες το στο GitHub",
     contactTitle: "Επικοινωνία",
     contactText: "Έχεις project ή κάποια ερώτηση; Γράψε μου.",
     flowLabel: "ροή αέρα",

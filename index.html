@@ -101,12 +101,43 @@
       </p>
     </section>
 
-    <!-- Placeholder: real projects will be added here later -->
+    <!-- One card per project -->
     <section id="projects">
       <h2 data-i18n="projectsTitle">Projects</h2>
-      <div class="empty">
-        <p data-i18n="projectsText">My first project is in progress. Check back soon.</p>
-      </div>
+
+      <article class="project">
+        <img class="project-image" src="images/greek-air-traffic.png"
+          alt="Line chart: share of yearly passengers per month for Athens, Thessaloniki, Heraklion, Santorini and Mykonos in 2025">
+
+        <div class="project-body">
+          <p class="project-type" data-i18n="p1Type">Data analysis</p>
+          <h3>Greek Air Traffic</h3>
+          <p data-i18n="p1Text">
+            How much does each Greek airport depend on summer tourism?
+            An analysis of 27 years of Eurostat passenger data for 47 airports.
+          </p>
+
+          <!-- Three key numbers from the analysis -->
+          <dl class="stats">
+            <div>
+              <dt>84M</dt>
+              <dd data-i18n="p1Stat1">passengers in 2025</dd>
+            </div>
+            <div>
+              <dt>88%</dt>
+              <dd data-i18n="p1Stat2">of Skiathos traffic in 4 summer months</dd>
+            </div>
+            <div>
+              <dt>&minus;68%</dt>
+              <dd data-i18n="p1Stat3">passengers in 2020 (COVID-19)</dd>
+            </div>
+          </dl>
+
+          <p class="tools">Python · pandas · matplotlib · Jupyter</p>
+          <a class="project-link" href="https://github.com/foivosfarkonas-create/greek-air-traffic"
+            target="_blank" rel="noopener" data-i18n="p1Link">View on GitHub</a>
+        </div>
+      </article>
     </section>
 
     <!-- Contact: the email is the main action -->
